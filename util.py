@@ -63,29 +63,7 @@ def paint():
     cv.imshow('Blue',blank)
     cv.waitKey(0)
 
-def rect():
-    import cv2 as cv
-    import numpy as np
-    blank=np.zeros((500,500,3),dtype='uint8')
-    cv.rectangle(blank,(0,0),(blank.shape[1]//2,blank.shape[0]//2),(255,0,0),thickness=3)
-    cv.imshow('Rectangle',blank)
-    cv.waitKey(0)
 
-def circle():
-    import cv2 as cv
-    import numpy as np
-    blank=np.zeros((500,500,3),dtype='uint8')
-    cv.circle(blank,(blank.shape[1]//2,blank.shape[0]//2),40,(0,255,0),thickness=-1)
-    cv.imshow('Circle',blank)
-    cv.waitKey(0)
-
-def line():
-    import cv2 as cv
-    import numpy as np
-    blank=np.zeros((500,500,3),dtype='uint8')
-    cv.line(blank,(0,0),(300,400),(255,255,255),thickness=3)
-    cv.imshow('Line',blank)
-    cv.waitKey(0)
 
 def text():
     import cv2 as cv
@@ -96,30 +74,29 @@ def text():
     cv.waitKey(0)
 
 def shapes():
-    #blank
+  
     import cv2 as cv
     import numpy as np
     blank=np.zeros((500,500,3),dtype='uint8')
-    #paint
+  
     blank=np.zeros((500,500,3),dtype='uint8')
     blank[200:300,300:400]=255,0,0
     cv.imshow('Blue',blank)
-    #rect
+  
     blank=np.zeros((500,500,3),dtype='uint8')
     cv.rectangle(blank,(0,0),(blank.shape[1]//2,blank.shape[0]//2),(255,0,0),thickness=3)
     cv.imshow('Rectangle',blank)
-    #circle
+  
     blank=np.zeros((500,500,3),dtype='uint8')
     cv.circle(blank,(blank.shape[1]//2,blank.shape[0]//2),40,(0,255,0),thickness=-1)
     cv.imshow('Circle',blank)
-    #line
+
     blank=np.zeros((500,500,3),dtype='uint8')
     cv.line(blank,(0,0),(300,400),(255,255,255),thickness=3)
     cv.imshow('Line',blank)
     cv.waitKey(0)
     
-    
-# 5 ESSENTIAL FUNCTIONS IN OPEN CV
+ 
 
 def gray():
     import cv2 as cv
@@ -151,9 +128,9 @@ def dilate():
     cv.imshow('Cat',img)
     canny=cv.Canny(img,125,175)
     dilated=cv.dilate(img,(3,3),iterations=1)
-    #eroded=cv.erode(dilated,(3,3),iterations=1)
+  
     cv.imshow('Dilated',dilated)
-    #cv.imshow('Eroded',eroded)
+    
     cv.waitKey(0)
     
 def erode():
@@ -163,11 +140,10 @@ def erode():
     canny=cv.Canny(img,125,175)
     dilated=cv.dilate(img,(3,3),iterations=1)
     eroded=cv.erode(dilated,(3,3),iterations=1)
-    #cv.imshow('Dilated',dilated)
+ 
     cv.imshow('Eroded',eroded)
     cv.waitKey(0)
-    
-# IMAGE TRANSFORMATIONS  
+
     
 def translate():
     import cv2 as cv
@@ -299,7 +275,6 @@ def color_spaces():
     cv.imshow('red',R)
     cv.waitKey(0)
 
-#SMOOTHING AND BLURRING
 
 def convolution():
     import cv2
@@ -352,7 +327,6 @@ def bilateral():
     cv2.waitKey()
     cv2.destroyAllWindows()
 
-#BITWISE OPERATORS
 
 def bitwise_and():
     import cv2 
@@ -396,7 +370,6 @@ def bitwise_not():
     if cv2.waitKey(0) & 0xff == 27:
         cv2.destroyAllWindows()
 
-#MASKING AND HISTOGRAM COMPUTATION
 
 def masking():
     import cv2 as cv
